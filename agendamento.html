@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Agendamento</title>
+  <script src="js/agendamento.js"></script>
+</head>
+
+<body>
+
+  <div class="logo-container">
+    <img src="logo.jpg" alt="Logotipo do Hospital São Lucas & Mendel" class="logo" />
+  </div>
+
+  <header>
+    <h1>Agendamento de Consultas</h1>
+  </header>
+
+  <br><br>
+
+  <main>
+    <form id="agendamentoForm">
+      <label for="paciente">Paciente:</label>
+      <input type="text" id="paciente" placeholder="Nome do paciente" required>
+
+      <label for="medicos">Médicos:</label>
+      <select id="medicos" required>
+        <option value="Dr. Carlos">Dr. Carlos</option>
+        <option value="Dr. Gabriel">Dr. Gabriel</option>
+        <option value="Dra. Maria">Dra. Maria</option>
+        <option value="Dr. Ryan">Dr. Ryan</option>
+      </select>
+
+      <label for="especialidade">Especialidade Médica:</label>
+      <input type="text" id="especialidade" placeholder="Especialidade médica" required>
+
+      <label for="data">Data:</label>
+      <input type="date" id="data" required>
+
+      <label for="horario">Horário:</label>
+      <select id="horario" required>
+        <option value="07:00">07:00</option>
+        <option value="07:30">07:30</option>
+        <option value="08:00">08:00</option>
+        <option value="08:30">08:30</option>
+        <option value="09:00">09:00</option>
+        <option value="09:30">09:30</option>
+        <option value="10:00">10:00</option>
+        <option value="10:30">10:30</option>
+        <option value="11:00">11:00</option>
+        <option value="11:30">11:30</option>
+        <option value="12:00">12:00</option>
+        <option value="12:30">12:30</option>
+        <option value="13:00">13:00</option>
+        <option value="13:30">13:30</option>
+        <option value="14:00">14:00</option>
+        <option value="14:30">14:30</option>
+        <option value="15:00">15:00</option>
+        <option value="15:30">15:30</option>
+        <option value="16:00">16:00</option>
+      </select>
+
+      <label for="motivo">Motivo da Consulta (opcional):</label>
+      <input type="text" id="motivo" placeholder="Motivo da consulta">
+
+      <label for="tipoConsulta">Tipo de Consulta:</label>
+      <select id="tipoConsulta" required>
+        <option value="presencial">Presencial</option>
+        <option value="online">Online</option>
+      </select>
+
+      <label for="planoSaude">Convênio Médico (se aplicável):</label>
+      <input type="text" id="planoSaude" placeholder="Nome do convênio">
+
+      <label for="numeroCarteira">Número da Carteira (se aplicável):</label>
+      <input type="text" id="numeroCarteira" placeholder="Número da carteira do plano de saúde">
+
+      <label for="observacoes">Observações Adicionais (opcional):</label>
+      <textarea id="observacoes" placeholder="Observações" rows="4"></textarea>
+
+      <button type="submit">Agendar</button>
+    </form>
+
+    <br><br>
+
+    <section id="agenda">
+      <h2>Consultas Agendadas</h2>
+      <ul id="consultasLista"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <button onclick="window.location.href='index.html'" class="retorno-btn">Voltar para a tela inicial</button>
+  </footer>
+
+</body>
+
+</html>
